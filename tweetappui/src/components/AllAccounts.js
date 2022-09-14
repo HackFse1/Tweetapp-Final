@@ -10,8 +10,8 @@ function AllAccounts() {
   const storeFollowerAccounts = useSelector(
     (state) => state.AccountReducer.followerAccounts
   );
-  
-  const [disablePostButton, setDisablePostButton] = useState(true);
+  console.log(storeFollowerAccounts);
+ const [disablePostButton, setDisablePostButton] = useState(true);
   const [handle, setHandle] = useState("");
   useEffect(() => {
     if (localStorage.getItem("token") === null) {

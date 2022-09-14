@@ -89,6 +89,7 @@ function PostItem(props) {
 
   function sendComment(e) {
     if(commentContent.length>1 && props.handles!=="user"){
+      console.log(commentContent);
     dispatch(
       addComment({
         postId: postId,
@@ -96,7 +97,8 @@ function PostItem(props) {
           userId: localStorage.getItem("userName"),
           userFullname:
             localStorage.getItem("userName"),
-          content: commentContent,
+            content: commentContent,
+          
         },
       })
     );

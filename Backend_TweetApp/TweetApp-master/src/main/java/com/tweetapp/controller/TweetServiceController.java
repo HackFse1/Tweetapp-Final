@@ -75,10 +75,10 @@ public class TweetServiceController {
         log.info("inside tweet service controller to get all tweets");
         if(authFeign.getValidity(token).getBody().isValid() &&authFeign.getValidity(token).getBody().getUsername().equals(username)) {
             List<ResponseTweet> tweetsList=tweetservice.getTweetsByUsername(username);
-            if(!tweetsList.isEmpty())
+            //if(!tweetsList.isEmpty())
                 return new ResponseEntity<>(tweetsList, HttpStatus.OK);
-            else
-                return new ResponseEntity<>("No Tweets!!!,Let's Starts with new tweet ", HttpStatus.OK);
+//            else
+//                return new ResponseEntity<>("No Tweets!!!,Let's Starts with new tweet ", HttpStatus.OK);
 
         }
 

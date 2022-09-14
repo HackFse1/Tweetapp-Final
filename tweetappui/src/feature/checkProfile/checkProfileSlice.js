@@ -25,7 +25,7 @@ export const getProfilePosts = createAsyncThunk(
    
     const response = await axios({
       method: "get",
-      url: "/api2/apps/v1.0/tweets/"+localStorage.getItem("userName"),
+      url: "/api2/apps/v1.0/tweets/"+localStorage.getItem("userName")+"/tweets",
       headers: {
         Authorization: "Bearer "+localStorage.getItem("token"),
         "Content-Type": "application/json",

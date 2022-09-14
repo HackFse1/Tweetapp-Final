@@ -67,7 +67,7 @@ function PostCompose() {
     try {
       const response = await axios({
         method: "post",
-        url: "api2/apps/v1.0/tweets/"+localStorage.getItem("userName")+"/add",
+        url: "api2/apps/v1.0/tweets/"+localStorage.getItem("userName")+"/addTweet",
         headers: {
           Authorization: "Bearer "+localStorage.getItem("token"),
         },

@@ -36,9 +36,10 @@ async function insertComment(postId, commentContent) {
   });
 }
 async function updateLove(postId, currentUserId) {
+    console.log(postId);
     console.log(currentUserId);
     const response = await axios({
-        method: "put",
+        method: "post",
         url: "/api2/apps/v1.0/tweets/"+currentUserId+"/like/"+postId,
         headers: {
          Authorization: "Bearer "+localStorage.getItem("token"),

@@ -16,6 +16,11 @@ export const getAllAccounts = createAsyncThunk(
     const response = await axios({
       method: "get",
       url: "/api1/apps/v1.0/tweets/users/all",
+      headers: {
+        Authorization: "Bearer "+localStorage.getItem("token"),
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
     });
     return response.data;
   }
@@ -23,9 +28,16 @@ export const getAllAccounts = createAsyncThunk(
 export const getAccountsByUser = createAsyncThunk(
   "/api1/apps/v1.0/tweets/users/search",
   async ({username},thunkAPI) => {
+      //url: "/api1/apps/v1.0/tweets/users/search/"+username,
+      console.log(username);
     const response = await axios({
       method: "get",
       url: "/api1/apps/v1.0/tweets/users/search/"+username,
+      headers: {
+        Authorization: "Bearer "+localStorage.getItem("token"),
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
     });
     return response.data;
   }
@@ -41,7 +53,7 @@ export const AccountSlice = createSlice({
       state.followerAccounts = action.payload;
     });
     builder.addCase(getAccountsByUser.fulfilled, (state, action) => {
-      state.followerAccounts = action.payload.response;
+      state.followerAccounts = action.payload;
     });
   },
 });
