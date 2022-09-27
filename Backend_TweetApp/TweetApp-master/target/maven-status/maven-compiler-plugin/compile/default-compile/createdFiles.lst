@@ -2,6 +2,7 @@ com\tweetapp\config\AuthFeign.class
 com\tweetapp\serviceImpl\TweetServiceImpl.class
 com\tweetapp\exception\TweetNotFoundException.class
 com\tweetapp\config\AppConfigs.class
+com\tweetapp\config\OpenApiConfig.class
 com\tweetapp\model\AuthResponse.class
 com\tweetapp\exception\GlobalExceptionHandler.class
 com\tweetapp\controller\TweetServiceController.class
