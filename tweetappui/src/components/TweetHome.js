@@ -19,7 +19,7 @@ function TweetHome() {
   
   async function tokenValidate(){
     const response = await axios({
-      method: "get",
+      method: "post",
       url: "/api1/apps/v1.0/tweets/validate",
       headers: {
         Authorization: "Bearer "+localStorage.getItem("token"),

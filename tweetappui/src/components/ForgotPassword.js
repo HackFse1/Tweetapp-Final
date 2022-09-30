@@ -38,8 +38,8 @@ function ForgotPassword() {
       },
       headers:{
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": process.env.REACT_APP_API_URL,
-    }
+        "Access-Control-Allow-Origin": process.env.REACT_APP_API_URL
+      }
     });
     
     if (response.data !== null && response.status !== 200) {

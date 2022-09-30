@@ -54,10 +54,10 @@ public class TweetServiceController {
         log.info("inside tweet service controller to get all tweets");
         if(authFeign.getValidity(token).getBody().isValid()) {
             List<ResponseTweet> tweetsList=tweetservice.getAllTweets();
-            if(!tweetsList.isEmpty())
+            //if(!tweetsList.isEmpty())
                 return new ResponseEntity<>(tweetsList, HttpStatus.OK);
-            else
-                return new ResponseEntity<>("No Tweets!!!,Let's Starts with new tweet ", HttpStatus.OK);
+           // else
+                //return new ResponseEntity<>("No Tweets!!!,Let's Starts with new tweet ", HttpStatus.OK);
 
         }
         log.info("inside tweet service controller ,token expired login again");

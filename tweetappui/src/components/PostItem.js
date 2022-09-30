@@ -25,6 +25,7 @@ import {
 
 function PostItem(props) {
   const dispatch = useDispatch();
+  const regex = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/g;
 
   const [loveStatus, setLoveStatus] = useState(props.loveList!==null?props.loveList.includes(localStorage.getItem("userName")):false);
   const [commentStatus, setCommentStatus] = useState(false);
@@ -229,7 +230,7 @@ function PostItem(props) {
                     <span>{commentItem.substring(0,commentItem.indexOf('-'))}</span>
                   </div>
                 </div>
-                <div>{commentItem.substring(commentItem.indexOf('-')+1,)}</div>
+                <div>{(commentItem.substring(commentItem.indexOf('-')+1).replace(regex," "))}</div>
               </div>
             ))):(<span></span>)}
           </div>
