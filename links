@@ -5,8 +5,8 @@ PT for FSE  - vfse
 LINKS created in CloudBuilder
 -----------------------------
 RDS - tweetapprds.ccdnxp7jpxfi.ap-northeast-1.rds.amazonaws.com
-EBS(userservice) - http://tweetappuserservice1-env.eba-b7kvjkfa.ap-northeast-1.elasticbeanstalk.com/
-EBS (tweetservice) - http://tweetapptweetservice1-env-1.eba-2qm9wfaa.ap-northeast-1.elasticbeanstalk.com/
+EBS(userservice) - http://finaltweetuserservice-env.eba-med2pyaj.ap-northeast-1.elasticbeanstalk.com/
+EBS (tweetservice) - http://finaltweettweetservice-env.eba-q4jrpyta.ap-northeast-1.elasticbeanstalk.com/
 
 
 
